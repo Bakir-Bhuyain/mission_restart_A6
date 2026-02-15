@@ -32,7 +32,7 @@
       <nav class="sm:grid grid-rows-1 md:w-22/24 mx-auto font-ok">
         <div class="navbar bg-base-100">
           <div class="navbar-start">
-            <a href="" class="sm:text-xl md:text-2xl hover:text-blue-800"
+            <a href="" class="sm:text-xl md:text-2xl text-blue-700 font-extrabold"
               >G-Cart</a
             >
           </div>
@@ -54,7 +54,33 @@
       </nav>
     </header>
     <main>
-      
+      <section
+        class="banner-container min-h-[400px] md:min-h-[600px] relative overflow-hidden mx-auto w-11/12 md:w-full"
+      >
+        <div
+          class="absolute inset-0 bg-[url('./Assets/banner-image.png')] bg-cover bg-center bg-no-repeat"
+        >
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-900/60 via-blue-600/20 to-transparent"></div>
+        </div>
+
+        <div
+          class="relative h-full flex flex-col justify-center items-start px-8 py-20 md:py-40 md:px-20 text-white gap-6 w-22/24"
+        >
+          <span class="text-4xl md:text-6xl font-bold"
+            >Best Collections For You</span
+          >
+          <p class="text-lg md:text-xl max-w-lg opacity-90">
+            Discover the latest trends in fashion, electronics, and more. Shop
+            with confidence and style at G-Mart.
+          </p>
+          <button
+            class="btn btn-primary bg-indigo-600 border-none hover:bg-indigo-700 px-8 rounded-lg text-white font-semibold"
+          >
+            Shop Now
+          </button>
+        </div>
+      </section>
+      <section class="why-choose-us"></section>
     </main>
     <footer></footer>
   </body>
