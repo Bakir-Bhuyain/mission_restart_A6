@@ -1,11 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>G-STORE</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- daisyui and tailwind setup -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn setup -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>G-STORE</title>
+  </head>
+  <body>
+    <header>
+      <nav class="sm:grid grid-rows-1 md:w-22/24 mx-auto font-ok">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <a href="" class="sm:text-xl md:text-2xl hover:text-blue-800"
+              >G-Cart</a
+            >
+          </div>
+          <div class="navbar-center hidden md:flex gap-5 font-ok">
+            <a class="text-xl hover:text-blue-500" href="">Home</a>
+            <a class="text-xl hover:text-blue-500" href="">Products</a>
+            <a class="text-xl hover:text-blue-500" href="">About</a>
+            <a class="text-xl hover:text-blue-500" href="">Contact</a>
+          </div>
+          <div class="navbar-end">
+            <button class="btn btn-ghost btn-circle hidden md:flex">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button class="btn btn-ghost md:hidden">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
       
-</body>
+    </main>
+    <footer></footer>
+  </body>
 </html>
