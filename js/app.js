@@ -1,0 +1,55 @@
+const productDisplay = async () => {
+  const productsData = await fetch("https://fakestoreapi.com/products");
+  const res = await productsData.json();
+
+  const displayProducts = document.getElementById("all-products-display");
+  displayProducts.innerHTML = "";
+
+  res.forEach((product) => {
+    const card = document.createElement("div");
+    card.classList.add("card", "bg-white", "w-full", "shadow-sm", "hover:shadow-md", "transition-all", "border",
+     "border-gray-200",);
+
+    card.innerHTML = `
+        <figure class="px-4 pt-4 bg-[#f3f7ff]">
+          <img
+            src="${product.image}" 
+            alt="${product.title}"
+            class="h-64 w-full object-contain"
+          />
+        </figure>
+
+        <div class="card-body p-5">
+          <div class="flex justify-between items-center mb-2">
+            <span class="bg-[#e0e7ff] text-[#5842ff] text-xs font-semibold px-3 py-1 rounded-md">
+              ${product.category}
+            </span>
+            <div class="flex items-center text-orange-400 gap-1">
+              <i class="fa-solid fa-star text-xs"></i>
+              <span class="text-xs text-gray-500 font-sans">${product.rating.rate} (${product.rating.count})</span>
+            </div>
+          </div>
+
+          <h2 class="text-lg font-bold text-gray-800 line-clamp-1" title="${product.title}">
+            ${product.title}
+          </h2>
+          <p class="text-xl font-extrabold text-gray-900 mt-2">$${product.price}</p>
+
+          <div class="flex gap-3 mt-6">
+            <button class="btn btn-outline border-gray-300 text-gray-600 hover:bg-gray-100 flex-1 gap-2">
+              <i class="fa-regular fa-eye"></i> Details
+            </button>
+            <button class="btn bg-[#5842ff] hover:bg-[#4632d4] border-none text-white flex-1 gap-2">
+              <i class="fa-solid fa-cart-shopping"></i> Add
+            </button>
+          </div>
+        </div>
+    `;
+
+    // ৪. প্যারেন্ট গ্রিডে কার্ডটি ঢুকিয়ে দাও
+    displayProducts.appendChild(card);
+  });
+};
+
+productDisplay();
+// productDisplay();

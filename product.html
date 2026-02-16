@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/styles.css" />
+    <!-- daisyui and tailwind setup -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awesome cdn setup -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Product Page</title>
+  </head>
+  <body>
+    <header>
+      <nav class="sm:grid grid-rows-1 md:w-22/24 mx-auto font-ok">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <a
+              href=""
+              class="sm:text-xl md:text-2xl text-blue-700 font-extrabold"
+              >G-Cart</a
+            >
+          </div>
+          <div class="navbar-center hidden md:flex gap-5 font-ok">
+            <a id="product-display" class="text-xl hover:text-blue-500" href=""
+              >Home</a
+            >
+            <a class="text-xl hover:text-blue-500" href="">Products</a>
+            <a class="text-xl hover:text-blue-500" href="">About</a>
+            <a class="text-xl hover:text-blue-500" href="">Contact</a>
+          </div>
+          <div class="navbar-end">
+            <button class="btn btn-ghost btn-circle md:flex">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button class="btn btn-ghost md:hidden">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section
+      class="home-section w-11/12 md:w-22/24 mx-auto mt-20 font-ok text-center"
+    >
+      <h1 class="text-3xl md:text-5xl font-bold mb-10 text-[#1a2332]">
+        Our Products
+      </h1>
+
+      <div
+        class="flex flex-row flex-wrap justify-center gap-4 md:gap-6 mt-12 mx-auto"
+      >
+        <button
+          class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
+          onclick="productDisplay()"
+        >
+          All
+        </button>
+        <button
+          class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
+        >
+          Electronics
+        </button>
+        <button
+          class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
+        >
+          Jewelery
+        </button>
+        <button
+          class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
+        >
+          Men's Clothing
+        </button>
+        <button
+          class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
+        >
+          Women's Clothing
+        </button>
+      </div>
+    </section>
+    <section>
+      <div
+        id="all-products-display"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 mx-auto mt-20"
+      ></div>
+    </section>
+    <footer
+      class="foooter-section bg-[#1a2332] text-white py-12 px-6 md:px-12 font-ok mt-12"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-700 pb-10"
+      >
+        <div class="space-y-4 text-left">
+          <h2 class="text-2xl font-bold text-blue-500">SwiftCart</h2>
+          <p class="text-sm text-gray-400 leading-relaxed">
+            Your one-stop shop for all your fashion and lifestyle needs. Quality
+            products, fast delivery, and excellent support.
+          </p>
+        </div>
+
+        <div class="text-left">
+          <h6 class="text-gray-300 font-semibold uppercase mb-4 tracking-wider">
+            Quick Links
+          </h6>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-blue-500 transition">Home</a></li>
+            <li>
+              <a href="#" class="hover:text-blue-500 transition">Products</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-500 transition">About</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-500 transition">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-left">
+          <h6 class="text-gray-300 font-semibold uppercase mb-4 tracking-wider">
+            Support
+          </h6>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#" class="hover:text-blue-500 transition">FAQ</a></li>
+            <li>
+              <a href="#" class="hover:text-blue-500 transition">Shipping</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-500 transition">Returns</a>
+            </li>
+            <li>
+              <a href="#" class="hover:text-blue-500 transition"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="text-left">
+          <h6 class="text-gray-300 font-semibold uppercase mb-4 tracking-wider">
+            Subscribe to our newsletter
+          </h6>
+          <p class="text-sm text-gray-400 mb-4">
+            The latest news, articles, and resources, sent to your inbox weekly.
+          </p>
+          <form class="flex flex-col sm:flex-row gap-2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="input input-bordered w-full bg-white text-black focus:outline-none"
+            />
+            <button
+              class="btn bg-[#5842ff] hover:bg-[#4632d4] border-none text-white px-6"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <p class="text-sm text-gray-400">
+          © 2025 SwiftCart, Inc. All rights reserved.
+        </p>
+
+        <div class="flex gap-6 text-xl text-gray-400">
+          <a href="#" class="hover:text-white transition"
+            ><i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="#" class="hover:text-white transition"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a href="#" class="hover:text-white transition"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="#" class="hover:text-white transition"
+            ><i class="fa-brands fa-square-linkedin"></i
+          ></a>
+          <a href="#" class="hover:text-white transition"
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
