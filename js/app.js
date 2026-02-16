@@ -1,3 +1,23 @@
+const homeToProducts = async () => {
+  const goToProduct = await fetch(
+    "https://fakestoreapi.com/products/categories",
+  );
+  const res = await goToProduct.json();
+  const mainProduct = document.getElementById("product-btn");
+  mainProduct.innerHTML ="";
+  res.forEach((category) => {
+    const button = document.createElement("button");
+
+    button.classList =
+      "px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white category-btn";
+
+    button.innerText = category;
+
+    mainProduct.appendChild(button);
+  });
+};
+homeToProducts();
+
 const productDisplay = async () => {
   const productsData = await fetch("https://fakestoreapi.com/products");
   const res = await productsData.json();
@@ -7,8 +27,16 @@ const productDisplay = async () => {
 
   res.forEach((product) => {
     const card = document.createElement("div");
-    card.classList.add("card", "bg-white", "w-full", "shadow-sm", "hover:shadow-md", "transition-all", "border",
-     "border-gray-200",);
+    card.classList.add(
+      "card",
+      "bg-white",
+      "w-full",
+      "shadow-sm",
+      "hover:shadow-md",
+      "transition-all",
+      "border",
+      "border-gray-200",
+    );
 
     card.innerHTML = `
         <figure class="px-4 pt-4 bg-[#f3f7ff]">
@@ -45,11 +73,9 @@ const productDisplay = async () => {
           </div>
         </div>
     `;
-
-    // ৪. প্যারেন্ট গ্রিডে কার্ডটি ঢুকিয়ে দাও
     displayProducts.appendChild(card);
   });
 };
 
-productDisplay();
+// productDisplay();
 // productDisplay();

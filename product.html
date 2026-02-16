@@ -65,37 +65,16 @@
       <h1 class="text-3xl md:text-5xl font-bold mb-10 text-[#1a2332]">
         Our Products
       </h1>
-
-      <div
-        class="flex flex-row flex-wrap justify-center gap-4 md:gap-6 mt-12 mx-auto"
+      <button
+        class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
+        onclick="productDisplay()"
       >
-        <button
-          class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
-          onclick="productDisplay()"
-        >
-          All
-        </button>
-        <button
-          class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
-        >
-          Electronics
-        </button>
-        <button
-          class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
-        >
-          Jewelery
-        </button>
-        <button
-          class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
-        >
-          Men's Clothing
-        </button>
-        <button
-          class="px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white"
-        >
-          Women's Clothing
-        </button>
-      </div>
+        All
+      </button>
+      <div
+        id="product-btn"
+        class="flex flex-row flex-wrap justify-center gap-4 md:gap-6 mt-12 mx-auto"
+      ></div>
     </section>
     <section>
       <div
