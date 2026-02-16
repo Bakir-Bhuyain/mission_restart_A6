@@ -12,11 +12,14 @@ const homeToProducts = async () => {
       "px-6 py-3 border border-gray-200 text-[#4b5563] cursor-pointer rounded-full font-medium hover:border-[#5842ff] hover:text-[#5842ff] bg-white category-btn";
 
     button.innerText = category;
+    button.onclick = () => {
+      specificProductsDisplay(category);
+    };
 
     mainProduct.appendChild(button);
   });
 };
-homeToProducts();
+
 
 const productDisplay = async () => {
   const productsData = await fetch("https://fakestoreapi.com/products");
@@ -77,5 +80,33 @@ const productDisplay = async () => {
   });
 };
 
+const specificProductsDisplay = async(category) =>{
+  const specificProduct = await fetch(
+    `https://fakestoreapi.com/products/category/${category}`,
+  );
+  const res = await specificProduct.json();
+  const displaySpecificProducts = document.getElementById('all-products-display');
+  displaySpecificProducts.innerHTML = " ";
+  res.forEach(product => {
+    // console.log(categories)
+    const card = document.createElement('div');
+    card.classList.add("card", "bg-white", "w-full", "shadow-sm", "border");
+    card.innerHTML = `
+          <figure class="px-4 pt-4">
+            <img src="${product.image}" class="h-64 w-full object-contain" />
+          </figure>
+          <div class="card-body">
+             <h2 class="font-bold">${product.title}</h2>
+             <p>$${product.price}</p>
+          </div>
+      `;
+      displaySpecificProducts.appendChild(card);
+  });
+}
+
+
+
+
+
 // productDisplay();
-// productDisplay();
+homeToProducts();
