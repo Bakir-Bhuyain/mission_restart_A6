@@ -140,18 +140,17 @@ const specificProductsDisplay = async (category) => {
 const handleShowDetails = () => {
   console.log("show button clicked");
 }; 
-// productDisplay();
-homeToProducts();
+
 const btn = document.getElementById("hamburger-btn");
 const menu = document.getElementById("mobile-menu");
 
 btn.addEventListener("click", () => {
   // Mobile-e menu toggle korar jonno
   menu.classList.toggle("hidden");
-  // Flex direction ensure korar jonno (Mobile e niche niche, Desktop e pashapashi)
   menu.classList.toggle("flex");
 });
-
+// productDisplay();
+homeToProducts();
 
 
 
