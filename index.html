@@ -51,13 +51,22 @@
             <a class="text-xl hover:text-blue-500" href="">About</a>
             <a class="text-xl hover:text-blue-500" href="">Contact</a>
           </div>
-          <div class="navbar-end">
-            <button class="btn btn-ghost btn-circle md:flex">
-              <i class="fa-solid fa-cart-shopping"></i>
-            </button>
-            <button class="btn btn-ghost md:hidden">
+          <div class="navbar-end flex items-center gap-3 relative">
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <button id="hamburger-btn" class="btn btn-ghost md:hidden">
               <i class="fa-solid fa-bars"></i>
             </button>
+
+            <div
+              id="mobile-menu"
+              class="hidden absolute top-full right-0 bg-white shadow-md flex-col p-4 z-50"
+            >
+              <a class="text-xl hover:text-blue-500" href="index.html">Home</a>
+              <a class="text-xl hover:text-blue-500" href="product.html">Products</a>
+              <a class="text-xl hover:text-blue-500" href="about.html">About</a>
+              <a class="text-xl hover:text-blue-500" href="">Contact</a>
+            </div>
           </div>
         </div>
       </nav>

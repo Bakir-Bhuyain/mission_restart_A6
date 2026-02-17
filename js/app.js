@@ -136,3 +136,13 @@ const specificProductsDisplay = async (category) => {
 
 // productDisplay();
 homeToProducts();
+
+
+
+const btn = document.getElementById("hamburger-btn");
+const menu = document.getElementById("mobile-menu");
+
+btn.onclick = function () {
+  menu.classList.toggle("hidden");
+  menu.classList.toggle("flex");
+};
