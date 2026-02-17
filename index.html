@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/styles.css">
+    <link rel="stylesheet" href="./style/styles.css" />
     <!-- daisyui and tailwind setup -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -41,17 +41,37 @@
           </div>
           <div class="navbar-center hidden md:flex gap-5 font-ok">
             <a class="text-xl hover:text-blue-500" href="">Home</a>
-            <a id="" onclick="" class="text-xl hover:text-blue-500" href="https://g-storee.netlify.app/product.html">Products</a>
+            <a
+              id=""
+              class="text-xl hover:text-blue-500"
+              href="https://g-storee.netlify.app/product.html"
+              >Products</a
+            >
             <a class="text-xl hover:text-blue-500" href="">About</a>
             <a class="text-xl hover:text-blue-500" href="">Contact</a>
           </div>
           <div class="navbar-end">
-            <button class="btn btn-ghost btn-circle  md:flex">
+            <button class="btn btn-ghost btn-circle md:flex">
               <i class="fa-solid fa-cart-shopping"></i>
             </button>
-            <button class="btn btn-ghost md:hidden">
+            <button id="hamburger-btn" class="btn btn-ghost md:hidden">
               <i class="fa-solid fa-bars"></i>
+              <div
+              id="mobile-menu"
+              class="hidden md:flex gap-5 font-ok flex-col md:flex-row absolute md:static bg-white p-5 md:p-0 shadow-lg md:shadow-none top-16 left-0 w-full md:w-auto z-50"
+            >
+              <a class="text-xl hover:text-blue-500" href="">Home</a>
+              <a
+                class="text-xl hover:text-blue-500"
+                href="https://g-storee.netlify.app/product.html"
+                >Products</a
+              >
+              <a class="text-xl hover:text-blue-500" href="">About</a>
+              <a class="text-xl hover:text-blue-500" href="">Contact</a>
+            </div>
             </button>
+
+            
           </div>
         </div>
       </nav>
@@ -117,7 +137,7 @@
         >
           <div class="card-body p-12 gap-6">
             <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2 "
+              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-2"
             >
               <i class="fa-regular fa-headphones"></i>
             </div>
@@ -159,7 +179,8 @@
           </div>
         </div>
       </section>
-      <section id=""
+      <section
+        id=""
         class="products-card-container w-11/12 md:w-22/24 mx-auto mt-20 font-ok"
       >
         <h1 class="text-3xl md:text-4xl font-bold text-left mb-12">
@@ -303,7 +324,7 @@
         </div>
       </section>
     </main>
-    
+
     <footer
       class="foooter-section bg-[#1a2332] text-white py-12 px-6 md:px-12 font-ok mt-12"
     >
