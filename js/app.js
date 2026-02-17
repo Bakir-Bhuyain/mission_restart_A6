@@ -4,8 +4,7 @@ const homeToProducts = async () => {
   );
   const res = await goToProduct.json();
   const mainProduct = document.getElementById("product-btn");
-  mainProduct.innerHTML = " ";
-  
+  mainProduct.innerHTML = "";
   res.forEach((category) => {
     const button = document.createElement("button");
 
@@ -67,7 +66,7 @@ const productDisplay = async () => {
           <p class="text-xl font-extrabold text-gray-900 mt-2">$${product.price}</p>
 
           <div class="flex gap-3 mt-6">
-            <button onclick="" class="btn btn-outline border-gray-300 text-gray-600 hover:bg-gray-100 flex-1 gap-2">
+            <button class="btn btn-outline border-gray-300 text-gray-600 hover:bg-gray-100 flex-1 gap-2">
               <i class="fa-regular fa-eye"></i> Details
             </button>
             <button class="btn bg-[#5842ff] hover:bg-[#4632d4] border-none text-white flex-1 gap-2">
@@ -79,8 +78,6 @@ const productDisplay = async () => {
     displayProducts.appendChild(card);
   });
 };
- 
-
 
 const specificProductsDisplay = async (category) => {
   const specificProduct = await fetch(
@@ -124,7 +121,7 @@ const specificProductsDisplay = async (category) => {
           <p class="text-xl font-extrabold text-gray-900 mt-2">$${product.price}</p>
 
           <div class="flex gap-3 mt-6">
-            <button onclick="handleShowDetails()" class="btn btn-outline border-gray-300 text-gray-600 hover:bg-gray-100 flex-1 gap-2">
+            <button class="btn btn-outline border-gray-300 text-gray-600 hover:bg-gray-100 flex-1 gap-2">
               <i class="fa-regular fa-eye"></i> Details
             </button>
             <button class="btn bg-[#5842ff] hover:bg-[#4632d4] border-none text-white flex-1 gap-2">
@@ -137,25 +134,5 @@ const specificProductsDisplay = async (category) => {
   });
 };
 
-const handleShowDetails = () => {
-  console.log("show button clicked");
-}; 
-
-const btn = document.getElementById("hamburger-btn");
-const menu = document.getElementById("mobile-menu");
-
-btn.addEventListener("click", () => {
-  // Mobile-e menu toggle korar jonno
-  menu.classList.toggle("hidden");
-  menu.classList.toggle("flex");
-});
 // productDisplay();
 homeToProducts();
-
-
-
-
-
-
-
-
